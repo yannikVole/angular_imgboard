@@ -1,0 +1,6 @@
+<div class="row darkgrey">
+  <div *ngIf="hasImgUrl">
+    <img [src]="comment.img_url" alt="NO IMG" class="col s12 m4">
+  </div>
+<p class="col s12 m8">{{comment.body}}</p>
+</div>

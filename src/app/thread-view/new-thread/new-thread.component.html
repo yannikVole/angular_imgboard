@@ -1,0 +1,39 @@
+<div class="row">
+  <button class="btn-small grey darken-2 col s12 m10 offset-m1" (click)="toggleModal($event)">New Thread</button>
+</div>
+<!-- MODAL -->
+<div class="modal" [ngClass]="{'active':showModal}">
+<div class="form-wrapper row">
+  <h2 class="col s12 m10 offset-m1">Submit new Post</h2>
+  <div class="row">
+    <div class="input-field col s12 m10 offset-m1">
+        <input placeholder="title" id="title" type="text" class="validate" ng-model="newThread.title">
+        <label for="title">Title <small>(optional)</small></label>
+    </div>
+  </div>
+  <div class="row">
+      <form class="col s12 m10 offset-m1">
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" ng-model="newThread.body"></textarea>
+            <label for="textarea1">Body</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  <div class="row">
+      <div class="file-field input-field col s12 m10 offset-m1">
+          <div class="btn">
+          <span>File</span>
+          <input type="file" name="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit" class="btn col s12 m10 offset-m1 grey darken-2" (click)="submitThread()">
+  </div>
+</div>
+</div>
